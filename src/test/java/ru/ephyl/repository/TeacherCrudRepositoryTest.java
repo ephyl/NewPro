@@ -1,11 +1,14 @@
 package ru.ephyl.repository;
 
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.core.env.Environment;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.DynamicPropertyRegistry;
+import org.springframework.test.context.DynamicPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.testcontainers.containers.PostgreSQLContainer;
@@ -14,11 +17,12 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 import ru.ephyl.config.AppConfig;
 import ru.ephyl.model.Teacher;
 
+import javax.sql.DataSource;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = {AppConfig.class})
@@ -26,37 +30,43 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @Testcontainers
 class TeacherCrudRepositoryTest {
 
-
-    @Autowired
     TeacherCrudRepository teacherCrudRepository;
+    DataSource dataSource;
 
     @Autowired
-    private LocalContainerEntityManagerFactoryBean localContainerEntityManagerFactoryBean;
-
-    @BeforeEach
-    public void setup() throws Exception {
-
-        postgreSQLContainer.start();
-        DriverManagerDataSource dataSourceTestContainer = new DriverManagerDataSource();
-        dataSourceTestContainer.setUrl(postgreSQLContainer.getJdbcUrl());
-        dataSourceTestContainer.setUsername(postgreSQLContainer.getUsername());
-        dataSourceTestContainer.setPassword(postgreSQLContainer.getPassword());
-        localContainerEntityManagerFactoryBean.setDataSource(dataSourceTestContainer);
+    public TeacherCrudRepositoryTest(TeacherCrudRepository teacherCrudRepository, DataSource dataSource) {
+        this.teacherCrudRepository = teacherCrudRepository;
+        this.dataSource = dataSource;
     }
 
     @Container
-    static PostgreSQLContainer<?> postgreSQLContainer = new PostgreSQLContainer<>(
+    private final static PostgreSQLContainer<?> postgreSQLContainer = new PostgreSQLContainer<>(
             "postgres:15-alpine"
     ).withInitScript("init_postgresql.sql");
+
+    @BeforeEach
+    public void setup() throws Exception {
+        postgreSQLContainer.start();
+    }
 
     @AfterAll
     static void afterAll() {
         postgreSQLContainer.stop();
     }
-
+    @DynamicPropertySource
+    static void dynamicProperties(DynamicPropertyRegistry registry) {
+        registry.add("hibernate.connection.url", postgreSQLContainer::getJdbcUrl);
+        registry.add("hibernate.connection.username", postgreSQLContainer::getUsername);
+        registry.add("hibernate.connection.password", postgreSQLContainer::getPassword);
+    }
 
     @Test
-    public void UniTest() {
+    void UniTest() throws SQLException {
+        Connection connection = dataSource.getConnection();
+        System.out.println(connection.getSchema());
+
+
+
         System.out.println("1____________________________________________________________");
         System.out.println(postgreSQLContainer.getJdbcUrl());
         System.out.println("2____________________________________________________________");
@@ -93,4 +103,19 @@ class TeacherCrudRepositoryTest {
 //        System.setProperty("hibernate.connection.username", postgreSQLContainer.getUsername());
 //        System.setProperty("hibernate.connection.password", postgreSQLContainer.getPassword());
 //
+//    }
+
+//
+//    @Autowired
+//    private LocalContainerEntityManagerFactoryBean localContainerEntityManagerFactoryBean;
+//
+//    @BeforeEach
+//    public void setup() throws Exception {
+//
+//        postgreSQLContainer.start();
+//        DriverManagerDataSource dataSourceTestContainer = new DriverManagerDataSource();
+//        dataSourceTestContainer.setUrl(postgreSQLContainer.getJdbcUrl());
+//        dataSourceTestContainer.setUsername(postgreSQLContainer.getUsername());
+//        dataSourceTestContainer.setPassword(postgreSQLContainer.getPassword());
+//        localContainerEntityManagerFactoryBean.setDataSource(dataSourceTestContainer);
 //    }

@@ -41,17 +41,7 @@ public class AppConfig implements WebMvcConfigurer {
         templateResolver.setCharacterEncoding("UTF-8");
         return templateResolver;
     }
-//    @Bean
-//    @Profile("test")
-//    public DataSource dataSource() {
-//        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-//        dataSource.setDriverClassName("org.h2.Driver");
-//        dataSource.setUrl("jdbc:h2:mem:db;DB_CLOSE_DELAY=-1");
-//        dataSource.setUsername("sa");
-//        dataSource.setPassword("sa");
-//
-//        return dataSource;
-//    }
+
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
@@ -92,13 +82,5 @@ public class AppConfig implements WebMvcConfigurer {
 
         return transactionManager;
     }
-//    @Bean("courseRepository")
-//    public CourseRepository getCourseRepository(){
-//        return new CourseRepository();
-//    }
-//
-//    @Bean("courseService")
-//    public CourseService getCourseService(){
-//        return new CourseService(getCourseRepository());
-//    }
+
 }
