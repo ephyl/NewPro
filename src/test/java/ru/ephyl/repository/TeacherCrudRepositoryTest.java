@@ -60,7 +60,6 @@ class TeacherCrudRepositoryTest {
 
     @Test
     void UniTest() throws SQLException {
-        System.out.println(connection.getSchema());
 
 
 
