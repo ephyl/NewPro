@@ -9,26 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71f2c752-9fba-4c23-8807-af44bb7aa78a" name="Changes" comment="Initializing commit">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/3/332804d4ab7c0e461664e2844efbd598ab72fdf9" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/3/332804d4ab7c0e461664e2844efbd598ab72fdf9" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/4/54e863d2ed0bc77ad419ab5357f2c88b025c00c9" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/4/54e863d2ed0bc77ad419ab5357f2c88b025c00c9" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/e/5ece1d05e0d9c1b1659280b7710d22623dafb86f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/e/5ece1d05e0d9c1b1659280b7710d22623dafb86f" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/9/896494a4c7881f59492312ab18a788e50f41d086" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/9/896494a4c7881f59492312ab18a788e50f41d086" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/954f7835e12f30be7328ef72796887270ae91d3f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/954f7835e12f30be7328ef72796887270ae91d3f" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/7/97ab82110ae85817d548a3f81042c7bc4f056b26" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/7/97ab82110ae85817d548a3f81042c7bc4f056b26" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/8/a89e5a57fa695b175cf4273c11b2f01c1ab57978" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/8/a89e5a57fa695b175cf4273c11b2f01c1ab57978" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/8/a8ce0ac613097e0ca7afd263a5680349cd9ffb4c" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/8/a8ce0ac613097e0ca7afd263a5680349cd9ffb4c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b961bf594bd2993466bb1d52f09e6d9501e65bc2" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b961bf594bd2993466bb1d52f09e6d9501e65bc2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/7/c7d4042f07aa8adde77990ca9955e30bad86e557" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/7/c7d4042f07aa8adde77990ca9955e30bad86e557" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/4/d4180480ac9baa3dec5f2f585c202432a112faf9" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/4/d4180480ac9baa3dec5f2f585c202432a112faf9" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ephyl/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ephyl/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ephyl/repository/TeacherCrudRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ephyl/repository/TeacherCrudRepositoryTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="71f2c752-9fba-4c23-8807-af44bb7aa78a" name="Changes" comment="TeacherRepositoryTEst refactoring" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -292,7 +273,7 @@
       <updated>1694707471491</updated>
       <workItem from="1694707472536" duration="24456000" />
       <workItem from="1694870498122" duration="43505000" />
-      <workItem from="1695143595492" duration="1603000" />
+      <workItem from="1695143595492" duration="2006000" />
     </task>
     <task id="LOCAL-00001" summary="Initializing commit">
       <option name="closed" value="true" />
@@ -302,7 +283,23 @@
       <option name="project" value="LOCAL" />
       <updated>1695131746160</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="TeacherRepositoryTEst refactoring">
+      <option name="closed" value="true" />
+      <created>1695145428397</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695145428397</updated>
+    </task>
+    <task id="LOCAL-00003" summary="TeacherRepositoryTEst refactoring">
+      <option name="closed" value="true" />
+      <created>1695145592671</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695145592671</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +307,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initializing commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initializing commit" />
+    <MESSAGE value="TeacherRepositoryTEst refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="TeacherRepositoryTEst refactoring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -326,12 +324,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ru/ephyl/repository/TeacherCrudRepositoryTest.java</url>
-          <line>77</line>
+          <line>74</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ru/ephyl/repository/TeacherCrudRepositoryTest.java</url>
-          <line>79</line>
+          <line>76</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -341,12 +339,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ru/ephyl/repository/TeacherCrudRepositoryTest.java</url>
-          <line>64</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/ru/ephyl/repository/TeacherCrudRepositoryTest.java</url>
-          <line>70</line>
+          <line>67</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>

@@ -33,7 +33,7 @@ class TeacherCrudRepositoryTest {
     TeacherCrudRepository teacherCrudRepository;
 
     @Autowired
-    public TeacherCrudRepositoryTest(TeacherCrudRepository teacherCrudRepository {
+    public TeacherCrudRepositoryTest(TeacherCrudRepository teacherCrudRepository) {
         this.teacherCrudRepository = teacherCrudRepository;
     }
 
