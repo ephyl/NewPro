@@ -31,12 +31,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class TeacherCrudRepositoryTest {
 
     TeacherCrudRepository teacherCrudRepository;
-    DataSource dataSource;
 
     @Autowired
-    public TeacherCrudRepositoryTest(TeacherCrudRepository teacherCrudRepository, DataSource dataSource) {
+    public TeacherCrudRepositoryTest(TeacherCrudRepository teacherCrudRepository {
         this.teacherCrudRepository = teacherCrudRepository;
-        this.dataSource = dataSource;
     }
 
     @Container
@@ -62,7 +60,6 @@ class TeacherCrudRepositoryTest {
 
     @Test
     void UniTest() throws SQLException {
-        Connection connection = dataSource.getConnection();
         System.out.println(connection.getSchema());
 
 
