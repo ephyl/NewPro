@@ -1,10 +1,0 @@
-
-X	java:S125C"<This block of commented-out lines of code should be removed.(—ü€†8ğ„²™«1
-k
-java:S1128"IRemove this unused import 'jakarta.persistence.criteria.CriteriaBuilder'.(À¼ºñşÿÿÿÿ8·—«™«1
-Q
-java:S1128"4Remove this unused import 'ru.ephyl.dto.StudentDto'.(äì¾©8ñ„²™«1
-P
-java:S1128"3Remove this unused import 'ru.ephyl.model.Student'.(÷ëù’8ñ„²™«1
-a
-java:S1128"?Remove this unused import 'ru.ephyl.util.mapper.StudentMapper'.(úĞøÜıÿÿÿÿ8ñ„²™«1
