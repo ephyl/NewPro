@@ -8,4 +8,6 @@ import ru.ephyl.model.Course;
 public interface CourseMapper {
     CourseDto sourceToDestination(Course course);
     Course destinationToSource(CourseDto courseDtoDto);
+
+
 }

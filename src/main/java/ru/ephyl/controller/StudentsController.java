@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.ephyl.dto.StudentDto;
+import ru.ephyl.exception.StudentNotFoundException;
 import ru.ephyl.model.Student;
 import ru.ephyl.service.StudentService;
 import ru.ephyl.util.mapper.StudentMapper;
@@ -32,8 +33,8 @@ public class StudentsController {
         return convertToStudentDto(studentService.findById(Integer.parseInt(id)));
     }
     @GetMapping("/young")
-    public List<StudentDto> getUnder30() {
-        return studentService.findYoung().stream().map(this::convertToStudentDto).collect(Collectors.toList());
+    public List<StudentDto> getUnder31() {
+        return studentService.findYoungUnder31().stream().map(this::convertToStudentDto).collect(Collectors.toList());
     }
     @PostMapping
     public ResponseEntity<HttpStatus> create(@RequestBody StudentDto studentDto) {
@@ -61,6 +62,9 @@ public class StudentsController {
         StudentMapper mapper = Mappers.getMapper(StudentMapper.class);
         return mapper.sourceToDestination(student);
     }
-
+    @ExceptionHandler
+    private ResponseEntity<String> handleException(StudentNotFoundException exception){
+        return new ResponseEntity<>(exception.toString() , HttpStatus.BAD_REQUEST);
+    }
 
 }

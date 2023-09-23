@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import ru.ephyl.exception.CourseNotFoundException;
+import ru.ephyl.exception.StudentNotFoundException;
 import ru.ephyl.service.CourseManagerService;
 
 
@@ -31,4 +33,14 @@ public class CourseManagerController {
         courseManagerService.delete(map);
         return ResponseEntity.ok(HttpStatus.OK);
     }
+
+    @ExceptionHandler
+    private ResponseEntity<String> handleStudentNotFoundException(StudentNotFoundException exception){
+        return new ResponseEntity<>(exception.toString() , HttpStatus.BAD_REQUEST);
+    }
+    @ExceptionHandler
+    private ResponseEntity<String> handleCourseNotFoundException(CourseNotFoundException exception){
+        return new ResponseEntity<>(exception.toString() , HttpStatus.BAD_REQUEST);
+    }
+
 }

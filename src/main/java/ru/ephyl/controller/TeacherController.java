@@ -6,6 +6,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.ephyl.dto.TeacherDto;
+import ru.ephyl.exception.StudentNotFoundException;
+import ru.ephyl.exception.TeacherNotFoundException;
 import ru.ephyl.util.mapper.TeacherMapper;
 import ru.ephyl.model.Teacher;
 import ru.ephyl.service.TeacherService;
@@ -25,7 +27,7 @@ public class TeacherController {
 
     @GetMapping("/getAll")
     public List<TeacherDto> getTeachers() {
-        return teacherService.findAll().stream().map(x -> convertToTeacherDto(x)).collect(Collectors.toList());
+        return teacherService.findAll().stream().map(this::convertToTeacherDto).collect(Collectors.toList());
     }
 
     @GetMapping("/id")
@@ -61,4 +63,10 @@ public class TeacherController {
         TeacherMapper teacherMapper = Mappers.getMapper(TeacherMapper.class);
         return teacherMapper.sourceToDestination(teacher);
     }
+
+    @ExceptionHandler
+    private ResponseEntity<String> handleException(TeacherNotFoundException exception){
+        return new ResponseEntity<>(exception.toString() , HttpStatus.BAD_REQUEST);
+    }
+
 }

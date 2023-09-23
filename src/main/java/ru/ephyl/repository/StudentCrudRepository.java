@@ -8,11 +8,12 @@ import ru.ephyl.model.Student;
 import java.util.List;
 
 @Repository
-public interface StudentCrudRepository extends JpaRepository<Student, Integer > {
+public interface StudentCrudRepository extends JpaRepository<Student, Integer> {
     @Query(
-            value = "SELECT * FROM STUDENT s WHERE s.age <30",
+            value = "SELECT * FROM STUDENT s WHERE s.age <31",
             nativeQuery = true)
-    List<Student> findAllStudentsUnderThirty();
+    List<Student> findAllStudentsUnderThirtyOne();
 
 }
+
 

@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.ephyl.exception.StudentNotFoundException;
 import ru.ephyl.model.Student;
-import ru.ephyl.model.Teacher;
 import ru.ephyl.repository.StudentCrudRepository;
 
 import java.util.List;
@@ -38,7 +37,7 @@ public class StudentService {
         repository.save(student);
     }
 
-    public List<Student> findYoung(){
-        return  repository.findAllStudentsUnderThirty();
+    public List<Student> findYoungUnder31(){
+        return  repository.findAllStudentsUnderThirtyOne();
     }
 }

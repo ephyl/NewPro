@@ -3,10 +3,6 @@ I
 src/main/webapp/index.jsp,8/e/8e6d3b70c9f5b02570779b0441540d45eceb0ded
 [
 +src/main/java/ru/ephyl/HelloController.java,5/e/5ece1d05e0d9c1b1659280b7710d22623dafb86f
-n
->src/main/java/ru/ephyl/repository/manual/CourseRepository.java,5/4/54e863d2ed0bc77ad419ab5357f2c88b025c00c9
-l
-<src/main/java/ru/ephyl/repository/manual/CrudManualRepo.java,9/8/984e13169709b9be86bb8d070c964995ccb923cd
 l
 <src/main/java/ru/ephyl/repository/TeacherCrudRepository.java,b/c/bc9f3c639200e10be221724fd5527cdd760a62d6
 d
@@ -31,8 +27,6 @@ Y
 )src/main/java/ru/ephyl/model/Teacher.java,6/a/6a8e8b51cc89c85e06a5663813b874aa4bd62511
 \
 ,src/main/java/ru/ephyl/config/AppConfig.java,f/8/f8e871bec0f9d446492d528db7291d4ec482ba59
-{
-Ksrc/main/java/ru/ephyl/config/MySpringMvcDispatcherSerlvetIntitializer.java,2/c/2c9ac9519adac686e93048d899b8328f37c7f045
 g
 7src/main/java/ru/ephyl/controller/CourseController.java,b/9/b961bf594bd2993466bb1d52f09e6d9501e65bc2
 a
@@ -59,8 +53,6 @@ O
 src/main/webapp/WEB-INF/web.xml,2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
-o
-?src/test/java/ru/ephyl/repository/CourseCrudRepositoryTest.java,9/5/954f7835e12f30be7328ef72796887270ae91d3f
 w
 G.idea/sonarlint/issuestore/9/8/984e13169709b9be86bb8d070c964995ccb923cd,6/b/6b76983f008c200efefeee9657140a4b56efd2cf
 w
@@ -91,8 +83,6 @@ w
 G.idea/sonarlint/issuestore/2/0/20397e6d3dbbff50e111d003ad8776a1e9c050ce,c/4/c43efb54a6500c5efee21e8c3f44813881f31159
 w
 G.idea/sonarlint/issuestore/2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392,1/8/188792529ee886cbdc6616248007f7a96c73e03d
-w
-G.idea/sonarlint/issuestore/2/c/2c9ac9519adac686e93048d899b8328f37c7f045,c/c/cc1cb12a7fa9633ceabaaf16fadcc619f6cd39a7
 w
 G.idea/sonarlint/issuestore/2/6/26158ea85abe7856844f30528715de8ce890ac98,3/a/3a03d8d65bf382fd1f211ae33e2ff73860d94260
 w
@@ -150,8 +140,6 @@ Q.idea/sonarlint/securityhotspotstore/5/4/54e863d2ed0bc77ad419ab5357f2c88b025c00
 
 Q.idea/sonarlint/securityhotspotstore/2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392,5/7/57f21a9649435d4c0bebbf63045d868ce2bc78c1
 
-Q.idea/sonarlint/securityhotspotstore/2/c/2c9ac9519adac686e93048d899b8328f37c7f045,3/2/324545ed6a88468ccf1e1afb18eff36b31846329
-
 Q.idea/sonarlint/securityhotspotstore/2/6/26158ea85abe7856844f30528715de8ce890ac98,6/0/60a5d3b32efca794941ecd73e0676d3108981270
 
 Q.idea/sonarlint/securityhotspotstore/2/4/240367af761651604a155efb6264c414183667cb,e/e/ee2af7a614720d0e590b6418cc9fd508faf0b3a2
@@ -188,7 +176,17 @@ G.idea/sonarlint/issuestore/b/1/b146c24b520dcfe093adbb2b6568e9b00f964de7,5/e/5e
 Q.idea/sonarlint/securityhotspotstore/f/8/f8e871bec0f9d446492d528db7291d4ec482ba59,b/6/b6f3eae26afe379c74e1c73bc3ef4b32215e3205
 
 Q.idea/sonarlint/securityhotspotstore/e/a/ea2339cb8986bb5e514f5858d56bfb0775d3a2cb,f/2/f21d9f91420e78571316d90b27db0bbab6daf2fd
-]
--src/test/java/ru/ephyl/repository/DbTest.java,5/e/5ec1077d8720307da759bd408ca83217bc3ccaa0
 p
 @src/test/java/ru/ephyl/repository/TeacherCrudRepositoryTest.java,3/7/37da7c01b5029246c469526b19d18a82bfeb2ed3
+Z
+*src/main/java/ru/ephyl/dto/CourseDto2.java,0/0/0060040689e64173655989f2bd6412faaa545212
+j
+:src/main/java/ru/ephyl/util/mapper/CustomCourseMapper.java,8/6/8662ee7668f4ef61d6d8f9fdfd0a474347e3141f
+n
+>src/test/java/ru/ephyl/util/mapper/CustomCourseMapperTest.java,2/b/2bf5211d2fec7537b8912e90edbac6e63d8cec1c
+k
+;src/test/java/ru/ephyl/controller/CourseControllerTest.java,7/8/78020f487484773a8dd9cea0d3743ad4b008f6dd
+p
+@src/test/java/ru/ephyl/repository/StudentCrudRepositoryTest.java,7/5/75b0cb1cc6c00d8898014eabd210497ba6e74ca7
+\
+,src/main/java/ru/ephyl/config/JPAConfig.java,5/2/526b654f2891b11e8dd1d17632143a1a0bc670aa

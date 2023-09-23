@@ -1,12 +1,11 @@
 package ru.ephyl.exception;
 
 public class CourseNotFoundException extends RuntimeException {
-    private final String info = "Course not found";
-    public CourseNotFoundException() {}
+    private static final String COURSE_NOT_FOUND = "Course not found";
     @Override
     public String toString() {
         return "CourseNotFoundException{" +
-                "info='" + info + '\'' +
+                "info='" + COURSE_NOT_FOUND + '\'' +
                 '}';
     }
 }

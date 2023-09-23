@@ -1,15 +1,14 @@
 package ru.ephyl.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 import ru.ephyl.exception.TeacherNotFoundException;
-import ru.ephyl.model.Course;
 import ru.ephyl.model.Teacher;
 import ru.ephyl.repository.TeacherCrudRepository;
 
 import java.util.List;
 
-@Repository
+@Service
 public class TeacherService {
     private TeacherCrudRepository repository;
 

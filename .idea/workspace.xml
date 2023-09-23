@@ -9,18 +9,91 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71f2c752-9fba-4c23-8807-af44bb7aa78a" name="Changes" comment="TeacherRepositoryTEst refactoring" />
+    <list default="true" id="71f2c752-9fba-4c23-8807-af44bb7aa78a" name="Changes" comment="TeacherRepositoryTEst refactoring">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/ephyl/config/JPAConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/ephyl/dto/CourseDtoWithStudentNames.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/ephyl/util/mapper/CustomCourseMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/ephyl/controller/CourseControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/ephyl/controller/CourseManagerControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/ephyl/controller/StudentsControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/ephyl/controller/TeacherControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/ephyl/dto/CourseDtoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/ephyl/dto/CourseDtoWithStudentNamesTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/ephyl/dto/StudentDtoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/ephyl/dto/TeacherDtoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/ephyl/model/CourseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/ephyl/model/StudentBaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/ephyl/model/TeacherTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/ephyl/repository/StudentCrudRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/ephyl/service/CourseManagerServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/ephyl/service/CourseServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/ephyl/service/StudentServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/ephyl/service/TeacherServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/ephyl/util/mapper/CustomCourseMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/c/2c9ac9519adac686e93048d899b8328f37c7f045" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/3/332804d4ab7c0e461664e2844efbd598ab72fdf9" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/3/332804d4ab7c0e461664e2844efbd598ab72fdf9" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/8/38fd3ca5f0ca3c16306b89d7ef9141449f020ffa" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/8/38fd3ca5f0ca3c16306b89d7ef9141449f020ffa" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/4/54e863d2ed0bc77ad419ab5357f2c88b025c00c9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/954f7835e12f30be7328ef72796887270ae91d3f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/8/984e13169709b9be86bb8d070c964995ccb923cd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/8/a89e5a57fa695b175cf4273c11b2f01c1ab57978" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/8/a89e5a57fa695b175cf4273c11b2f01c1ab57978" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/8/a8ce0ac613097e0ca7afd263a5680349cd9ffb4c" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/8/a8ce0ac613097e0ca7afd263a5680349cd9ffb4c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b961bf594bd2993466bb1d52f09e6d9501e65bc2" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b961bf594bd2993466bb1d52f09e6d9501e65bc2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/7/c7d4042f07aa8adde77990ca9955e30bad86e557" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/7/c7d4042f07aa8adde77990ca9955e30bad86e557" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/8/f8e871bec0f9d446492d528db7291d4ec482ba59" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/8/f8e871bec0f9d446492d528db7291d4ec482ba59" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/c/2c9ac9519adac686e93048d899b8328f37c7f045" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/4/54e863d2ed0bc77ad419ab5357f2c88b025c00c9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/5/954f7835e12f30be7328ef72796887270ae91d3f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/8/984e13169709b9be86bb8d070c964995ccb923cd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ephyl/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ephyl/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ephyl/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ephyl/config/MySpringMvcDispatcherSerlvetIntitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ephyl/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ephyl/controller/CourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ephyl/controller/CourseManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ephyl/controller/CourseManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ephyl/controller/StudentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ephyl/controller/StudentsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ephyl/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ephyl/controller/TeacherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ephyl/dto/CourseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ephyl/dto/CourseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ephyl/exception/CourseNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ephyl/exception/CourseNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ephyl/exception/NotUniqueNameException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ephyl/exception/NotUniqueNameException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ephyl/exception/StudentNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ephyl/exception/StudentNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ephyl/exception/TeacherNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ephyl/exception/TeacherNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ephyl/model/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ephyl/model/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ephyl/repository/CourseCrudRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ephyl/repository/CourseCrudRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ephyl/repository/StudentCrudRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ephyl/repository/StudentCrudRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ephyl/repository/TeacherCrudRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ephyl/repository/TeacherCrudRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ephyl/repository/manual/CourseRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ephyl/repository/manual/CrudManualRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ephyl/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ephyl/service/CourseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ephyl/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ephyl/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ephyl/service/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ephyl/service/TeacherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/ephyl/util/mapper/CourseMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/ephyl/util/mapper/CourseMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ephyl/repository/CourseCrudRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ephyl/repository/CourseCrudRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ephyl/repository/DbTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ephyl/repository/TeacherCrudRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ephyl/repository/TeacherCrudRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/hibernate.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/hibernate.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="1" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
       </list>
     </option>
   </component>
@@ -43,130 +116,129 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/ephyl/Документы/java/aston/homework3/forTests/NewPro/src/test/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.28536284&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;1b98529ebbfac7ae237a3b23fab9013b&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "/home/ephyl/Документы/java/aston/homework3/forTests/NewPro/src/test/java/ru/ephyl/controller",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.28536284",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "1b98529ebbfac7ae237a3b23fab9013b",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java/ru/ephyl/controller" />
+      <recent name="$PROJECT_DIR$/src/test/java/ru/ephyl" />
       <recent name="$PROJECT_DIR$/src/test/resources" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java/ru/ephyl/exception" />
-      <recent name="$PROJECT_DIR$/src/main/java/ru/ephyl" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="ru.ephyl.controller" />
+      <recent name="ru.ephyl.dto" />
+      <recent name="ru.ephyl.model" />
       <recent name="ru.ephyl.repository" />
+      <recent name="ru.ephyl.util.mapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.ephyl.dto" />
       <recent name="ru.ephyl.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TeacherCrudRepositoryTest.UniTest">
-    <configuration name="CourseControllerTest.UniTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.java in NewPro">
+    <configuration name="CourseManagerServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="NewPro" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.ephyl.repository.*" />
+          <option name="PATTERN" value="ru.ephyl.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.ephyl.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.ephyl.repository.CourseControllerTest" />
-      <option name="METHOD_NAME" value="UniTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CourseControllerTest.getByID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="NewPro" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.ephyl.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.ephyl.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.ephyl.repository.CourseControllerTest" />
-      <option name="METHOD_NAME" value="getByID" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DbTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="NewPro" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.ephyl.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.ephyl.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.ephyl.repository.DbTest" />
+      <option name="PACKAGE_NAME" value="ru.ephyl.service" />
+      <option name="MAIN_CLASS_NAME" value="ru.ephyl.service.CourseManagerServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TeacherCrudRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CourseManagerServiceTest.assign" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="NewPro" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.ephyl.repository.*" />
+          <option name="PATTERN" value="ru.ephyl.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.ephyl.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.ephyl.repository.TeacherCrudRepositoryTest" />
+      <option name="PACKAGE_NAME" value="ru.ephyl.service" />
+      <option name="MAIN_CLASS_NAME" value="ru.ephyl.service.CourseManagerServiceTest" />
+      <option name="METHOD_NAME" value="assign" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CourseManagerServiceTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NewPro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.ephyl.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.ephyl.service" />
+      <option name="MAIN_CLASS_NAME" value="ru.ephyl.service.CourseManagerServiceTest" />
+      <option name="METHOD_NAME" value="delete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CourseServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NewPro" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.ephyl.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.ephyl.service" />
+      <option name="MAIN_CLASS_NAME" value="ru.ephyl.service.CourseServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TeacherCrudRepositoryTest.UniTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="java in NewPro" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="NewPro" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.ephyl.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.ephyl.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.ephyl.repository.TeacherCrudRepositoryTest" />
-      <option name="METHOD_NAME" value="UniTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Tomcat 10.1.11" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.11" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER" value="false" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="NewPro:war exploded">
@@ -253,13 +325,21 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.CourseManagerServiceTest" />
+      <item itemvalue="JUnit.CourseManagerServiceTest.assign" />
+      <item itemvalue="JUnit.CourseManagerServiceTest.delete" />
+      <item itemvalue="JUnit.CourseServiceTest" />
+      <item itemvalue="JUnit.java in NewPro" />
+      <item itemvalue="Tomcat Server.Tomcat 10.1.11" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TeacherCrudRepositoryTest.UniTest" />
-        <item itemvalue="JUnit.TeacherCrudRepositoryTest" />
-        <item itemvalue="JUnit.CourseControllerTest.UniTest" />
-        <item itemvalue="JUnit.DbTest" />
-        <item itemvalue="JUnit.CourseControllerTest.getByID" />
+        <item itemvalue="JUnit.java in NewPro" />
+        <item itemvalue="JUnit.CourseManagerServiceTest" />
+        <item itemvalue="JUnit.CourseManagerServiceTest.delete" />
+        <item itemvalue="JUnit.CourseManagerServiceTest.assign" />
+        <item itemvalue="JUnit.CourseServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -273,7 +353,9 @@
       <updated>1694707471491</updated>
       <workItem from="1694707472536" duration="24456000" />
       <workItem from="1694870498122" duration="43505000" />
-      <workItem from="1695143595492" duration="2006000" />
+      <workItem from="1695143595492" duration="5944000" />
+      <workItem from="1695199370229" duration="18650000" />
+      <workItem from="1695286817116" duration="29528000" />
     </task>
     <task id="LOCAL-00001" summary="Initializing commit">
       <option name="closed" value="true" />
@@ -299,7 +381,23 @@
       <option name="project" value="LOCAL" />
       <updated>1695145592671</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="TeacherRepositoryTEst refactoring">
+      <option name="closed" value="true" />
+      <created>1695145637701</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695145637701</updated>
+    </task>
+    <task id="LOCAL-00005" summary="TeacherRepositoryTEst refactoring">
+      <option name="closed" value="true" />
+      <created>1695145670702</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695145670702</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,24 +411,10 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/ru/ephyl/repository/CourseCrudRepositoryTest.java</url>
-          <line>54</line>
-          <properties class="ru.ephyl.repository.CourseControllerTest" method="givenWac_whenServletContext_thenItProvidesGreetController">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ru/ephyl/repository/TeacherCrudRepositoryTest.java</url>
-          <line>74</line>
+          <line>62</line>
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/ru/ephyl/repository/TeacherCrudRepositoryTest.java</url>
-          <line>76</line>
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/6.0.12/spring-test-6.0.12-sources.jar!/org/springframework/test/context/web/AbstractGenericWebContextLoader.java</url>
@@ -338,9 +422,82 @@
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/ephyl/service/CourseService.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ru/ephyl/controller/TeacherControllerTest.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ru/ephyl/controller/TeacherControllerTest.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/ru/ephyl/repository/TeacherCrudRepositoryTest.java</url>
-          <line>67</line>
-          <option name="timeStamp" value="27" />
+          <line>61</line>
+          <properties class="ru.ephyl.repository.TeacherCrudRepositoryTest" method="UniTest">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/ru/ephyl/repository/CourseCrudRepositoryTest.java</url>
+          <line>61</line>
+          <properties class="ru.ephyl.repository.CourseCrudRepositoryTest" method="getAllCoursesWithStudents">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/ru/ephyl/controller/TeacherControllerTest.java</url>
+          <line>50</line>
+          <properties class="ru.ephyl.controller.TeacherControllerTest" method="getTeachers">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/ru/ephyl/service/TeacherServiceTest.java</url>
+          <line>39</line>
+          <properties class="ru.ephyl.service.TeacherServiceTest" method="delete">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/ru/ephyl/service/CourseServiceTest.java</url>
+          <line>35</line>
+          <properties class="ru.ephyl.service.CourseServiceTest" method="delete">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/ru/ephyl/controller/CourseManagerControllerTest.java</url>
+          <line>30</line>
+          <properties class="ru.ephyl.controller.CourseManagerControllerTest" method="delete">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/ru/ephyl/service/CourseManagerServiceTest.java</url>
+          <line>31</line>
+          <properties class="ru.ephyl.service.CourseManagerServiceTest" method="assign">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -351,5 +508,30 @@
         <PinnedItemInfo parentTag="org.springframework.test.context.web.WebMergedContextConfiguration" memberName="propertySourceLocations" />
       </pinned-members>
     </pin-to-top-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/NewPro$StudentsControllerTest.ic" NAME="StudentsControllerTest Coverage Results" MODIFIED="1695386821526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.ephyl.controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/NewPro$model_in_NewPro.ic" NAME="model in NewPro Coverage Results" MODIFIED="1695387886274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/NewPro$CourseDtoWithStudentNamesTest.ic" NAME="CourseDtoWithStudentNamesTest Coverage Results" MODIFIED="1695387804278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.ephyl.dto.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/NewPro$TeacherControllerTest.ic" NAME="TeacherControllerTest Coverage Results" MODIFIED="1695385176620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.ephyl.controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/NewPro$CourseManagerControllerTest.ic" NAME="CourseManagerControllerTest Coverage Results" MODIFIED="1695472058698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.ephyl.controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/NewPro$CourseServiceTest.ic" NAME="CourseServiceTest Coverage Results" MODIFIED="1695389862021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.ephyl.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/NewPro$service_in_NewPro.ic" NAME="service in NewPro Coverage Results" MODIFIED="1695471331220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/NewPro$controller_in_NewPro.ic" NAME="controller in NewPro Coverage Results" MODIFIED="1695472079671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/NewPro$CourseControllerTest.ic" NAME="CourseControllerTest Coverage Results" MODIFIED="1695326938664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.ephyl.controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/NewPro$java_in_NewPro.ic" NAME="java in NewPro Coverage Results" MODIFIED="1695327866542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/NewPro$dto_in_NewPro.ic" NAME="dto in NewPro Coverage Results" MODIFIED="1695328096477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

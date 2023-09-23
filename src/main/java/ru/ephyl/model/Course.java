@@ -3,6 +3,7 @@ package ru.ephyl.model;
 import jakarta.persistence.*;
 
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table(name = "course")
@@ -13,7 +14,7 @@ public class Course {
     private int id;
     @Column(name = "name")
     private String name;
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "course_student",
             joinColumns = @JoinColumn(name = "course_id"),
             inverseJoinColumns = @JoinColumn(name = "student_id"))
@@ -75,5 +76,18 @@ public class Course {
                 ", students=" + students +
                 ", teacher=" + teacher +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Course course = (Course) o;
+        return Objects.equals(name, course.name) && Objects.equals(students, course.students) && Objects.equals(teacher, course.teacher);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, students, teacher);
     }
 }

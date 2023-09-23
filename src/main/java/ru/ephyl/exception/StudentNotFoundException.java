@@ -2,15 +2,10 @@ package ru.ephyl.exception;
 
 public class StudentNotFoundException extends RuntimeException {
 
-    private final String info = "Student not found";
-    public StudentNotFoundException() {
-
-    }
-
+    private static final String STUDENT_NOT_FOUND = "Student not found";
     @Override
     public String toString() {
         return "StudentNotFoundException{" +
-                "info='" + info + '\'' +
-                '}';
+                STUDENT_NOT_FOUND + '}';
     }
 }
