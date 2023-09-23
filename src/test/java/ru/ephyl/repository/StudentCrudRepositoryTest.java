@@ -14,15 +14,14 @@ import org.springframework.transaction.annotation.Transactional;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
-import ru.ephyl.config.AppConfig;
 import ru.ephyl.config.JPAConfig;
 import ru.ephyl.model.Gender;
 import ru.ephyl.model.Student;
 
-import java.sql.SQLException;
 import java.util.NoSuchElementException;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = {JPAConfig.class})
@@ -45,7 +44,7 @@ class StudentCrudRepositoryTest {
             .withPassword("test");
 
     @BeforeEach
-    public void setup() throws Exception {
+    public void setup()  {
         postgreSQLContainer.start();
     }
 

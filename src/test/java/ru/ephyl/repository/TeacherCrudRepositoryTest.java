@@ -11,11 +11,9 @@ import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.web.WebAppConfiguration;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
-import ru.ephyl.config.AppConfig;
 import ru.ephyl.config.JPAConfig;
 import ru.ephyl.exception.TeacherNotFoundException;
 import ru.ephyl.model.Teacher;
@@ -54,6 +52,7 @@ class TeacherCrudRepositoryTest {
     static void afterAll() {
         postgreSQLContainer.stop();
     }
+
     @DynamicPropertySource
     static void dynamicProperties(DynamicPropertyRegistry registry) {
         registry.add("hibernate.connection.url", postgreSQLContainer::getJdbcUrl);
@@ -62,36 +61,39 @@ class TeacherCrudRepositoryTest {
     }
 
     @Test
-    void save_NewTeacherTest() throws SQLException {
+    void save_NewTeacherTest() {
         Teacher teacher = new Teacher("NEW");
         teacherCrudRepository.save(teacher);
         assertEquals(4, teacherCrudRepository.findAll().size());
         teacherCrudRepository.deleteById(4);
     }
+
     @Test
-    void findById_shouldFindTeacherTest() throws SQLException {
+    void findById_shouldFindTeacherTest() {
         Teacher teacher = teacherCrudRepository.findById(1).orElseThrow(TeacherNotFoundException::new);
         assertEquals("Java Teacher", teacher.getName());
     }
 
     @Test
-    void findAll_shouldFindALLTeachersTest() throws SQLException {
+    void findAll_shouldFindALLTeachersTest() {
         List<Teacher> teachers = teacherCrudRepository.findAll();
         assertEquals(3, teachers.size());
     }
+
     @Test
-    void update_shouldSetNewNameForTeacherTest() throws SQLException {
+    void update_shouldSetNewNameForTeacherTest() {
         Teacher teacher = teacherCrudRepository.findById(3).orElseThrow(TeacherNotFoundException::new);
-        String previousName  = teacher.getName();
+        String previousName = teacher.getName();
         teacher.setName("Updated teacher");
         teacherCrudRepository.save(teacher);
         assertEquals("Updated teacher", teacherCrudRepository.findById(3).get().getName());
         teacher.setName(previousName);
         teacherCrudRepository.save(teacher);
     }
+
     @Test
     @Transactional
-    void delete_DeleteByIdTest() throws SQLException {
+    void delete_DeleteByIdTest() {
         teacherCrudRepository.deleteById(2);
         assertEquals(2, teacherCrudRepository.findAll().size());
 

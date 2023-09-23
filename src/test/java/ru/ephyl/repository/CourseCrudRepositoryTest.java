@@ -21,11 +21,9 @@ import ru.ephyl.model.Teacher;
 
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.stream.Collectors;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = {JPAConfig.class})
@@ -94,26 +92,22 @@ class CourseCrudRepositoryTest {
         assertEquals(
                 5, repository.getAllCoursesWithStudents().size());
     }
+
     @Test
     @Transactional
     void updateOldCourse() {
-
-        Teacher teacher = teacherCrudRepository.findById(1).get();
         Course course = repository.findById(1).get();
         course.setName("Fantastic Name");
-
         Course updatedCourse = repository.save(course);
-
         assertEquals("Fantastic Name", updatedCourse.getName());
         assertEquals(
-
                 4
                 , repository.getAllCoursesWithStudents().size());
     }
 
     @Test
     @Transactional
-    void deleteCourse(){
+    void deleteCourse() {
         repository.deleteById(3);
         assertEquals(3, repository.getAllCoursesWithStudents().size());
 
