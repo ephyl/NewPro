@@ -8,6 +8,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import ru.ephyl.model.Teacher;
 import ru.ephyl.repository.TeacherCrudRepository;
 
+import java.util.List;
 import java.util.Optional;
 
 import static org.mockito.Mockito.verify;
@@ -21,6 +22,13 @@ class TeacherServiceTest {
     private TeacherService teacherService;
     @Mock
     private Teacher teacher;
+
+    @Test
+    void findAllTest(){
+        when(repo.findAll()).thenReturn(List.of(teacher));
+        teacherService.findAll();
+        verify(repo).findAll();
+    }
 
     @Test
     void findById() {

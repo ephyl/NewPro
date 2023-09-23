@@ -10,11 +10,17 @@ import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.web.WebAppConfiguration;
+import org.springframework.transaction.annotation.Transactional;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 import ru.ephyl.config.AppConfig;
 import ru.ephyl.config.JPAConfig;
+import ru.ephyl.model.Gender;
+import ru.ephyl.model.Student;
+
+import java.sql.SQLException;
+import java.util.NoSuchElementException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -25,10 +31,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class StudentCrudRepositoryTest {
 
     private final StudentCrudRepository studentCrudRepository;
+
     @Autowired
     public StudentCrudRepositoryTest(StudentCrudRepository studentCrudRepository) {
         this.studentCrudRepository = studentCrudRepository;
     }
+
     @Container
     private final static PostgreSQLContainer<?> postgreSQLContainer = new PostgreSQLContainer<>(
             "postgres:15-alpine"
@@ -45,6 +53,7 @@ class StudentCrudRepositoryTest {
     static void afterAll() {
         postgreSQLContainer.stop();
     }
+
     @DynamicPropertySource
     static void dynamicProperties(DynamicPropertyRegistry registry) {
         registry.add("hibernate.connection.url", postgreSQLContainer::getJdbcUrl);
@@ -54,8 +63,45 @@ class StudentCrudRepositoryTest {
 
     @Test
     void findAllStudentsUnderThirty() {
-        assertEquals(1 , studentCrudRepository.findAllStudentsUnderThirtyOne().size());
+        assertEquals(1, studentCrudRepository.findAllStudentsUnderThirtyOne().size());
+    }
 
+    @Test
+    void findAllStudents() {
+        assertEquals(3, studentCrudRepository.findAll().size());
+    }
+
+    @Test
+    void findStudentById() {
+        assertEquals("Egor Filippov", studentCrudRepository.findById(1).get().getName());
+    }
+
+    @Test
+    @Transactional
+    void saveNewStudent() {
+        Student student = new Student("New Student", 30, Gender.MALE);
+        Student savedStudent = studentCrudRepository.save(student);
+        assertEquals(4, studentCrudRepository.findAll().size());
+        assertEquals("New Student", savedStudent.getName());
+    }
+
+    @Test
+    @Transactional
+    void updateOldStudent() {
+        int size = studentCrudRepository.findAll().size();
+        Student student = studentCrudRepository.findById(3).get();
+        student.setAge(99);
+        Student savedStudent = studentCrudRepository.save(student);
+        assertEquals(size, studentCrudRepository.findAll().size());
+        assertEquals(99 , savedStudent.getAge());
+    }
+    @Test
+    @Transactional
+    void deleteStudent() {
+        int size = studentCrudRepository.findAll().size();
+        studentCrudRepository.deleteById(3);
+        assertEquals(size-1, studentCrudRepository.findAll().size());
+        assertThrows(NoSuchElementException.class, () -> studentCrudRepository.findById(3).get());
     }
 
 }

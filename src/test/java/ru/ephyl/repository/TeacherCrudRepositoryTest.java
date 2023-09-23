@@ -1,5 +1,6 @@
 package ru.ephyl.repository;
 
+import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -16,9 +17,11 @@ import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 import ru.ephyl.config.AppConfig;
 import ru.ephyl.config.JPAConfig;
+import ru.ephyl.exception.TeacherNotFoundException;
 import ru.ephyl.model.Teacher;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -59,11 +62,39 @@ class TeacherCrudRepositoryTest {
     }
 
     @Test
-    void UniTest() throws SQLException {
+    void save_NewTeacherTest() throws SQLException {
         Teacher teacher = new Teacher("NEW");
         teacherCrudRepository.save(teacher);
         assertEquals(4, teacherCrudRepository.findAll().size());
+        teacherCrudRepository.deleteById(4);
+    }
+    @Test
+    void findById_shouldFindTeacherTest() throws SQLException {
+        Teacher teacher = teacherCrudRepository.findById(1).orElseThrow(TeacherNotFoundException::new);
+        assertEquals("Java Teacher", teacher.getName());
     }
 
+    @Test
+    void findAll_shouldFindALLTeachersTest() throws SQLException {
+        List<Teacher> teachers = teacherCrudRepository.findAll();
+        assertEquals(3, teachers.size());
+    }
+    @Test
+    void update_shouldSetNewNameForTeacherTest() throws SQLException {
+        Teacher teacher = teacherCrudRepository.findById(3).orElseThrow(TeacherNotFoundException::new);
+        String previousName  = teacher.getName();
+        teacher.setName("Updated teacher");
+        teacherCrudRepository.save(teacher);
+        assertEquals("Updated teacher", teacherCrudRepository.findById(3).get().getName());
+        teacher.setName(previousName);
+        teacherCrudRepository.save(teacher);
+    }
+    @Test
+    @Transactional
+    void delete_DeleteByIdTest() throws SQLException {
+        teacherCrudRepository.deleteById(2);
+        assertEquals(2, teacherCrudRepository.findAll().size());
+
+    }
 
 }
