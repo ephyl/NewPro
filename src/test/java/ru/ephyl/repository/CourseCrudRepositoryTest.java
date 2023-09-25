@@ -1,9 +1,6 @@
 package ru.ephyl.repository;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -18,6 +15,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 import ru.ephyl.config.JPAConfig;
 import ru.ephyl.model.Course;
 import ru.ephyl.model.Teacher;
+import ru.ephyl.repository.repositoryConfig.TestJPAConfig;
 
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -26,8 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = {JPAConfig.class})
-@WebAppConfiguration
+@ContextConfiguration(classes = {TestJPAConfig.class})
 @Testcontainers
 class CourseCrudRepositoryTest {
     CourseCrudRepository repository;
@@ -46,8 +43,8 @@ class CourseCrudRepositoryTest {
             .withUsername("test")
             .withPassword("test");
 
-    @BeforeEach
-    public void setup() throws Exception {
+    @BeforeAll
+    public static void setup() throws Exception {
         postgreSQLContainer.start();
     }
 

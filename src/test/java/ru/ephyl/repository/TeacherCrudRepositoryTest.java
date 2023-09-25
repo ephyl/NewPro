@@ -2,7 +2,7 @@ package ru.ephyl.repository;
 
 import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,22 +10,19 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import org.springframework.test.context.web.WebAppConfiguration;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
-import ru.ephyl.config.JPAConfig;
 import ru.ephyl.exception.TeacherNotFoundException;
 import ru.ephyl.model.Teacher;
+import ru.ephyl.repository.repositoryConfig.TestJPAConfig;
 
-import java.sql.SQLException;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = {JPAConfig.class})
-@WebAppConfiguration
+@ContextConfiguration(classes = {TestJPAConfig.class})
 @Testcontainers
 class TeacherCrudRepositoryTest {
 
@@ -43,8 +40,8 @@ class TeacherCrudRepositoryTest {
             .withUsername("test")
             .withPassword("test");
 
-    @BeforeEach
-    public void setup() throws Exception {
+    @BeforeAll
+    public static void setup() throws Exception {
         postgreSQLContainer.start();
     }
 

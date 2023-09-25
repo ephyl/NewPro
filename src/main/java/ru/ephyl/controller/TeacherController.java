@@ -6,11 +6,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.ephyl.dto.TeacherDto;
-import ru.ephyl.exception.StudentNotFoundException;
 import ru.ephyl.exception.TeacherNotFoundException;
-import ru.ephyl.util.mapper.TeacherMapper;
 import ru.ephyl.model.Teacher;
 import ru.ephyl.service.TeacherService;
+import ru.ephyl.util.mapper.TeacherMapper;
 
 import java.util.List;
 import java.util.stream.Collectors;
