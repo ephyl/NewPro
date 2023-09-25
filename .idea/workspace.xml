@@ -10,10 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71f2c752-9fba-4c23-8807-af44bb7aa78a" name="Changes" comment="TeacherRepositoryTEst refactoring">
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/ephyl/repository/repositoryConfig/TestJPAConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/hibernate.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/hibernate.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/init.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ephyl/repository/CourseCrudRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ephyl/repository/CourseCrudRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ephyl/repository/StudentCrudRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ephyl/repository/StudentCrudRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/ephyl/repository/TeacherCrudRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/ephyl/repository/TeacherCrudRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,11 +102,12 @@
       <recent name="ru.ephyl.util.mapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.ephyl.repository.repositoryConfig" />
       <recent name="ru.ephyl.dto" />
       <recent name="ru.ephyl.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.java in NewPro">
+  <component name="RunManager" selected="JUnit.repository in NewPro">
     <configuration name="CourseCrudRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="NewPro" />
       <extension name="coverage">
@@ -135,42 +138,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CourseManagerServiceTest.assign" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="NewPro" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.ephyl.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.ephyl.service" />
-      <option name="MAIN_CLASS_NAME" value="ru.ephyl.service.CourseManagerServiceTest" />
-      <option name="METHOD_NAME" value="assign" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CourseManagerServiceTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="NewPro" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.ephyl.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.ephyl.service" />
-      <option name="MAIN_CLASS_NAME" value="ru.ephyl.service.CourseManagerServiceTest" />
-      <option name="METHOD_NAME" value="delete" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="java in NewPro" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="NewPro" />
       <option name="TEST_OBJECT" value="directory" />
       <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="repository in NewPro" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NewPro" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/ru/ephyl/repository" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="repositoryConfig in NewPro" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NewPro" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/ru/ephyl/repository/repositoryConfig" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -265,19 +252,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.CourseCrudRepositoryTest" />
+      <item itemvalue="JUnit.repository in NewPro" />
+      <item itemvalue="JUnit.repositoryConfig in NewPro" />
       <item itemvalue="JUnit.CourseManagerServiceTest" />
-      <item itemvalue="JUnit.CourseManagerServiceTest.assign" />
-      <item itemvalue="JUnit.CourseManagerServiceTest.delete" />
       <item itemvalue="JUnit.java in NewPro" />
       <item itemvalue="Tomcat Server.Tomcat 10.1.11" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.repository in NewPro" />
+        <item itemvalue="JUnit.repositoryConfig in NewPro" />
         <item itemvalue="JUnit.java in NewPro" />
         <item itemvalue="JUnit.CourseCrudRepositoryTest" />
         <item itemvalue="JUnit.CourseManagerServiceTest" />
-        <item itemvalue="JUnit.CourseManagerServiceTest.delete" />
-        <item itemvalue="JUnit.CourseManagerServiceTest.assign" />
       </list>
     </recent_temporary>
   </component>
@@ -335,7 +322,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695145670702</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="TeacherRepositoryTEst refactoring">
+      <option name="closed" value="true" />
+      <created>1695488141382</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1695488141382</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +357,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ru/ephyl/repository/TeacherCrudRepositoryTest.java</url>
-          <line>62</line>
+          <line>64</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -387,7 +382,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/ru/ephyl/repository/TeacherCrudRepositoryTest.java</url>
-          <line>61</line>
+          <line>63</line>
           <properties class="ru.ephyl.repository.TeacherCrudRepositoryTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -396,7 +391,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/ru/ephyl/repository/CourseCrudRepositoryTest.java</url>
-          <line>61</line>
+          <line>58</line>
           <properties class="ru.ephyl.repository.CourseCrudRepositoryTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
